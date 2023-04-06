@@ -95,3 +95,20 @@ test("over 25 eggs ordered", () => {
   const expected = "Oh no, we've run out of eggs! Please order something else.";
   expect(actual).toBe(expected);
 });
+
+// Test 8
+test("exactly 25 eggs ordered", () => {
+  const actual = eggCount([
+    "omelette",
+    "omelette",
+    "omelette",
+    "omelette",
+    "omelette",
+    "fried egg",
+    "omelette",
+    "omelette",
+    "omelette",
+  ]);
+  const expected = 25;
+  expect(actual).toBe(expected);
+});
