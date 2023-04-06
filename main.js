@@ -12,8 +12,8 @@ For example, the following order should require 8 eggs:
 [”scrambled egg”, “bacon”, “fried egg”, “toast”, “scrambled egg”, “omelette”]
 */
 
-//👉 Write the function your CodeWarriors will start with below here:
+// Here's your starter code:
 
-function eggCount(breakfastOrder) {
-  // your code here
+export function eggCount(breakfastOrder) {
+    //your code here!
 }

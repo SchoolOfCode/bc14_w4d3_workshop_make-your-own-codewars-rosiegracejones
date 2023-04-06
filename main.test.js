@@ -52,7 +52,7 @@ test("breakfast order needs 0 eggs", () => {
 });
 
 // Test 5
-test("breakfast order needs 21 eggs", () => {
+test("breakfast order needs 23 eggs", () => {
   const actual = eggCount([
     "scrambled eggs",
     "fried egg",
@@ -65,7 +65,7 @@ test("breakfast order needs 21 eggs", () => {
     "omelette",
     "omelette",
   ]);
-  const expected = 21;
+  const expected = 23;
   expect(actual).toBe(expected);
 });
 
