@@ -10,7 +10,6 @@ We're taking breakfast orders; it’s your job to work out how many eggs the kit
 
 For example, the following order should require 8 eggs:
 [”scrambled egg”, “bacon”, “fried egg”, “toast”, “scrambled egg”, “omelette”]
-
 */
 
 //👉 Write the function your CodeWarriors will start with below here:
