@@ -75,3 +75,23 @@ test("breakfast order needs 0 eggs", () => {
   const expected = 0;
   expect(actual).toBe(expected);
 });
+
+// Test 7
+test("over 25 eggs ordered", () => {
+  const actual = eggCount([
+    "scrambled eggs",
+    "fried egg",
+    "omelette",
+    "bacon",
+    "omelette",
+    "scrambled eggs",
+    "omelette",
+    "fried egg",
+    "omelette",
+    "scrambled eggs",
+    "omelette",
+    "omelette",
+  ]);
+  const expected = "Oh no, we've run out of eggs! Please order something else.";
+  expect(actual).toBe(expected);
+});
