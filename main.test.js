@@ -1,6 +1,7 @@
 import { test, expect } from "@jest/globals";
-import { eggCount } from "./main.js";
+import { eggCount, findPrice } from "./main.js";
 
+// Kato 1 tests:
 // Test 1
 test("breakfast order needs 4 eggs", () => {
   const actual = eggCount(["scrambled eggs", "scrambled eggs"]);
@@ -111,4 +112,66 @@ test("exactly 25 eggs ordered", () => {
   ]);
   const expected = 25;
   expect(actual).toBe(expected);
+});
+
+// Kato 2 tests:
+// Test 1
+test("customers should pay: £5.50, £12.50, £12.50", () => {
+  const actual = findPrice([
+    { drink: "coffee", extras: "pain au chocolat" },
+    { main: "full english", drink: "tea" },
+    { main: "vegan breakfast", extras: "toast" },
+  ]);
+  const expected = [5.5, 12.5, 12.5];
+  expect(actual).toEqual(expected);
+});
+
+// Test 2
+test("customers should pay: £11.50, £12.50, £12.50", () => {
+  const actual = findPrice([
+    { main: "eggs royale", drink: "coffee", extras: "pain au chocolat" },
+    { main: "full english", drink: "tea" },
+    { main: "vegan breakfast", extras: "toast" },
+  ]);
+  const expected = [11.5, 12.5, 12.5];
+  expect(actual).toEqual(expected);
+});
+
+// Test 3
+test("each customer should pay £9, £4.50, £13.50", () => {
+  const actual = findPrice([
+    { main: "eggs royale", drink: "tea" },
+    { drink: "coffee", extras: "toast" },
+    { main: "vegan breakfast", extras: "pain au chocolat" },
+  ]);
+  const expected = [9, 4.5, 13.5];
+  expect(actual).toEqual(expected);
+});
+
+// Test 4
+test("each customer should pay £3", () => {
+  const actual = findPrice([{ main: "vegan breakfast" }, { drink: "coffee" }]);
+  const expected = [11, 3];
+  expect(actual).toEqual(expected);
+});
+
+// Test 5
+test("should return an empty array", () => {
+  const actual = findPrice([]);
+  const expected = [];
+  expect(actual).toEqual(expected);
+});
+
+// Test 6
+test("each customer should pay £10.50, £4.50, £5.50, £3.50, £4.50, £12.50", () => {
+  const actual = findPrice([
+    { main: "eggs royale", drink: "coffee", extras: "toast" },
+    { drink: "coffee", extras: "toast" },
+    { drink: "coffee", extras: "pain au chocolat" },
+    { drink: "tea", extras: "toast" },
+    { drink: "tea", extras: "pain au chocolat" },
+    { main: "full english" },
+  ]);
+  const expected = [10.5, 4.5, 5.5, 3.5, 4.5, 12.5];
+  expect(actual).toEqual(expected);
 });

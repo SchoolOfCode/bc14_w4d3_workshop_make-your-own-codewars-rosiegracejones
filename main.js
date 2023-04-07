@@ -26,28 +26,30 @@ It's time for the breakfast cafe's customers to pay their bill!
 You'll need to work out how much each customer owes for their order, with the following pricing:
 
 Mains
-* full english - £12.50 (main)
-* vegan breakfast - £11 (main)
-* eggs royale £9 (main)
-
-Drinks
-* coffee £3
-* tea £2
+* "full english" - £12.50
+* "vegan breakfast" - £11
+* "eggs royale" £9 
 
 Extras
-* pain au chocolat £2.50
-* toast £1.50
+* "pain au chocolat" £2.50
+* "toast" £1.50
 
-* IMPORTANT: if 3 'main' meals or more are ordered, all hot drinks for the entire order are FREE.
+Drinks
+* "coffee" £3
+* "tea" £2
+
+* IMPORTANT: if a customer orders a main meal, they get one hot drink free
 
 Example:
 
-([{main: "full english", drink: "coffee"}, {main: "full english", drink: "tea"}, {main: "vegan breakfast", extras: "toast"}])
+    Order: ([{main: "full english", drink: "coffee"}, {main: "full english", drink: "tea"}, {main: "vegan breakfast", extras: "toast"}])
 
-should return: ([12.50, 12.50, 12.50])
-
+    Should return: ([12.50, 12.50, 12.50])
 */
 
-export function splitBill(orderItems) {
+// Here's your starter code:
+
+export function findPrice(orderItems) {
   // your code here!
 }
+
