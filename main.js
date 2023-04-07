@@ -1,8 +1,8 @@
 /* 
-Kato 1 - Easy
+Kata 1 - Easy
 
 Welcome to the breakfast cafe! 
-We're taking breakfast orders; it’s your job to work out how many eggs the kitchen will need for each order.
+We're taking breakfast orders; work out how many eggs the kitchen will need for each order.
 
 * for scrambled eggs, you’ll need 2 eggs
 * for an omelette you’ll need 3 eggs
@@ -19,11 +19,12 @@ export function eggCount(breakfastOrder) {
   // your code here!
 }
 
+
 /* 
-Kato 2 - Less Easy!
+Kata 2 - Less Easy!
 
 It's time for the breakfast cafe's customers to pay their bill! 
-You'll need to work out how much each customer owes for their order, with the following pricing:
+Work out how much each customer owes for their order, with the following pricing:
 
 Mains
 * "full english" - £12.50
@@ -38,10 +39,9 @@ Drinks
 * "coffee" £3
 * "tea" £2
 
-* IMPORTANT: if a customer orders a main meal, they get one hot drink free
+* IMPORTANT: if a customer orders a main meal, their drink will be free and shouldn't be included in their final bill
 
 Example:
-
     Order: ([{main: "full english", drink: "coffee"}, {main: "full english", drink: "tea"}, {main: "vegan breakfast", extras: "toast"}])
 
     Should return: ([12.50, 12.50, 12.50])
@@ -52,4 +52,8 @@ Example:
 export function findPrice(orderItems) {
   // your code here!
 }
+
+
+
+
 
