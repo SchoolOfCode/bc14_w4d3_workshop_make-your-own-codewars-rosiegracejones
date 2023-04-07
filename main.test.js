@@ -135,7 +135,7 @@ test("customers should pay: £11.50, £12.50, £12.50", () => {
 });
 
 // Test 3
-test("each customer should pay £9, £4.50, £13.50", () => {
+test("customers should pay: £9, £4.50, £13.50", () => {
   const actual = findPrice([
     { main: "eggs royale", drink: "tea" },
     { drink: "coffee", extras: "toast" },
@@ -146,7 +146,7 @@ test("each customer should pay £9, £4.50, £13.50", () => {
 });
 
 // Test 4
-test("each customer should pay £3", () => {
+test("customers should pay: £11, £3", () => {
   const actual = findPrice([{ main: "vegan breakfast" }, { drink: "coffee" }]);
   const expected = [11, 3];
   expect(actual).toEqual(expected);
@@ -160,7 +160,7 @@ test("should return an empty array", () => {
 });
 
 // Test 6
-test("each customer should pay £10.50, £4.50, £5.50, £3.50, £4.50, £12.50", () => {
+test("customers should pay: £10.50, £4.50, £5.50, £3.50, £4.50, £12.50", () => {
   const actual = findPrice([
     { main: "eggs royale", drink: "coffee", extras: "toast" },
     { drink: "coffee", extras: "toast" },
