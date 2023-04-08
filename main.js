@@ -4,13 +4,13 @@
 
   We're taking breakfast orders; work out how many eggs the kitchen will need for each order.
 
-  * for scrambled eggs, you’ll need 2 eggs
-  * for an omelette you’ll need 3 eggs
-  * for a fried egg, you’ll need 1 egg
+  * for "scrambled eggs", you’ll need 2 eggs
+  * for an "omelette" you’ll need 3 eggs
+  * for a "fried egg", you’ll need 1 egg
   * IMPORTANT: if an order contains over 25 eggs, you must return "Oh no, we've run out of eggs! Please order something else."
 
   Example: 
-  Order: [”scrambled egg”, “bacon”, “fried egg”, “toast”, “scrambled egg”, “omelette”]
+  Order: [”scrambled eggs”, “bacon”, “fried egg”, “toast”, “scrambled eggs”, “omelette”]
   Should return: 8
 */
 
